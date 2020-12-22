@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers extends AppCompatActivity {
     Integer[] numbers;
+    String[] num;
     ListView list;
     ArrayAdapter<Integer> arrayAdapter;
 
@@ -23,6 +24,11 @@ public class Numbers extends AppCompatActivity {
         {
             numbers[i]=i+1;
         }
+
+        num= new String[100];
+
+
+
         arrayAdapter= new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1,numbers);
         list.setAdapter(arrayAdapter);
     }
